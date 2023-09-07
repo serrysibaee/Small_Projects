@@ -8,4 +8,6 @@ This is a small project I did before from my second year in college and previous
 5. Sender_V2: This is the second version of the sender the main idea was mine but the general implementaion was from *Ahmed Abdul Jawad* with my help. This vesion works in the background on the device using excel files to read the numbers from also it supports putting the name of the reciever. Using new libraries with better implementaion 
 6. Card Game: is a small game that gives you the choice between 1 - 60 then it will predict the number after some questions
 7. PingPong game: is a small game
-8. rock paper scissors: a game from a random generator  
+8. rock paper scissors: a game from a random generator
+9. used code to scrap the text from the MOJ site (after downloading the file locally as HTML) and commented code is for general statistics
+
