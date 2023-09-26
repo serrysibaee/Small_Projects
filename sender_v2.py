@@ -7,31 +7,25 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-from pynput.keyboard import Controller, Key
-# pip install openpyxl
-# pip install selenium
-# pip install pynput
+from pynput.keyboard import Controller,Key
+#pip install openpyxl
+#pip install selenium
+#pip install pynput
 
 # Replace 'YOUR_CHROMEDRIVER_PATH' with the path to your ChromeDriver executable
-driver = webdriver.Chrome(
-    'executable_path' == "C:\\Users\\admin\\OneDrive\\سطح المكتب\\chromedriver.exe")
+driver = webdriver.Chrome('executable_path'=="C:\\Users\\admin\\OneDrive\\سطح المكتب\\chromedriver.exe")
 
 # Open WhatsApp Web
 driver.get('https://web.whatsapp.com')
 input('Scan the QR code and press Enter after WhatsApp Web is fully loaded: ')
 
 # Replace 'YOUR_EXCEL_FILE_PATH' with the path to your Excel file
-excel_file = openpyxl.load_workbook(
-    'C:\\Users\\admin\\OneDrive\\سطح المكتب\\whatsheet.xlsx')
+excel_file = openpyxl.load_workbook('C:\\Users\\admin\\OneDrive\\سطح المكتب\\whatsheet.xlsx')
 sheet = excel_file.active
 keyboard = Controller()
-
-
 def enter():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
-
-
 for row in sheet.iter_rows(min_row=2, values_only=True):
     name, phone_number, message = row
 
@@ -43,20 +37,23 @@ for row in sheet.iter_rows(min_row=2, values_only=True):
 
     # Open the chat with the contact
     driver.get(url)
-
+    
     # Wait for some time to let the chat load
     sleep(5)
-    # driver.find_element(By.XPATH, '//button[text()="Some text"]')
+    #driver.find_element(By.XPATH, '//button[text()="Some text"]')
 
     # Find the input field and send the message
-    # input_field = driver.find_element(By.XPATH,'')
-    # input_field.send_keys(message)
-    # input_field.send_keys(Keys.ENTER)
+    #input_field = driver.find_element(By.XPATH,'')
+    #input_field.send_keys(message)
+    #input_field.send_keys(Keys.ENTER)
     sleep(2.5)
     enter()
 
+    
     # Wait for a few seconds before sending the next message (to avoid rate limits)
     sleep(1.5)
 
 # Close the browser window
 driver.quit()
+
+
