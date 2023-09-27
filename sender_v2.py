@@ -13,19 +13,20 @@ from pynput.keyboard import Controller,Key
 #pip install pynput
 
 # Replace 'YOUR_CHROMEDRIVER_PATH' with the path to your ChromeDriver executable
-driver = webdriver.Chrome('executable_path'=="C:\\Users\\admin\\OneDrive\\سطح المكتب\\chromedriver.exe")
+driver = webdriver.Chrome('executable_path'=="C:\\Users\\serry\\Desktop\\chromedriver.exe")
 
 # Open WhatsApp Web
 driver.get('https://web.whatsapp.com')
 input('Scan the QR code and press Enter after WhatsApp Web is fully loaded: ')
 
 # Replace 'YOUR_EXCEL_FILE_PATH' with the path to your Excel file
-excel_file = openpyxl.load_workbook('C:\\Users\\admin\\OneDrive\\سطح المكتب\\whatsheet.xlsx')
+excel_file = openpyxl.load_workbook('C:\\Users\\serry\\Desktop\\WhatsApp Template.xlsx')
 sheet = excel_file.active
 keyboard = Controller()
 def enter():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
+
 for row in sheet.iter_rows(min_row=2, values_only=True):
     name, phone_number, message = row
 
