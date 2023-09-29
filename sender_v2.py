@@ -23,6 +23,7 @@ input('Scan the QR code and press Enter after WhatsApp Web is fully loaded: ')
 excel_file = openpyxl.load_workbook('C:\\Users\\serry\\Desktop\\WhatsApp Template.xlsx')
 sheet = excel_file.active
 keyboard = Controller()
+
 def enter():
     keyboard.press(Key.enter)
     keyboard.release(Key.enter)
