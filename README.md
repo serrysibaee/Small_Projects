@@ -10,4 +10,5 @@ This is a small project I did before from my second year in college and previous
 7. PingPong game: is a small game
 8. rock paper scissors: a game from a random generator
 9. used code to scrap the text from the MOJ site (after downloading the file locally as HTML) and commented code is for general statistics
+10. game of life code that is shown in the terminal 
 
